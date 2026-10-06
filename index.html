@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estrategias de intervención en la prevención del suicidio · Resumen del taller</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7F7; --surface:#FFFFFF; --ink:#16304A; --muted:#4A5F70;
+  --sage:#3F7A66; --sage-soft:#DCEBE4; --sky:#D6E7EE; --sun:#E3A23A; --sun-soft:#FBEFD9;
+  --rule:#D3DDE0; --green:#3E8A5B; --yellow:#C9971E; --red:#B9483B;
+  --ring1:#16304A; --ring2:#3F7A66; --ring3:#7FB0A0; --ring4:#C6DED5;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1A24; --surface:#152431; --ink:#E4EDF0; --muted:#A9BAC4;
+    --sage:#7DC0A6; --sage-soft:#1D3A33; --sky:#1C3242; --sun:#F0B657; --sun-soft:#3A2E17;
+    --rule:#2A3D4B; --green:#6CC08A; --yellow:#E8C15A; --red:#EE8273;
+    --ring1:#E4EDF0; --ring2:#7DC0A6; --ring3:#4C8C78; --ring4:#24443B;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1A24; --surface:#152431; --ink:#E4EDF0; --muted:#A9BAC4;
+  --sage:#7DC0A6; --sage-soft:#1D3A33; --sky:#1C3242; --sun:#F0B657; --sun-soft:#3A2E17;
+  --rule:#2A3D4B; --green:#6CC08A; --yellow:#E8C15A; --red:#EE8273;
+  --ring1:#E4EDF0; --ring2:#7DC0A6; --ring3:#4C8C78; --ring4:#24443B;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4.5rem)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3,h4{font-family:"Literata",Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.15rem);font-weight:600;margin-bottom:.4rem}
+h3{font-size:1.3rem;font-weight:600;margin:2.2rem 0 .6rem}
+h4{font-size:1.05rem;font-weight:600;margin:0 0 .35rem}
+p{margin:0 0 .9rem}
+a{color:var(--sage);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+img{max-width:100%}
+ul{margin:.2rem 0 1rem;padding-left:1.2rem}
+li{margin:.25rem 0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:clamp(1.5rem,5vw,3.5rem);padding-right:clamp(1.5rem,5vw,3.5rem)}
+.prose{max-width:68ch}
+.lead{font-size:1.15rem;color:var(--muted)}
+.src{font-size:.82rem;color:var(--muted);margin-top:.6rem}
+
+/* Nav */
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.topnav .wrap{display:flex;gap:1rem;align-items:center;justify-content:space-between;min-height:3.6rem}
+.topnav .brand{font-family:"Literata",Georgia,serif;font-weight:600;font-size:.98rem;white-space:nowrap}
+.topnav nav{display:flex;gap:.25rem;overflow-x:auto}
+.topnav nav a{color:var(--ink);text-decoration:none;padding:.4rem .75rem;border-radius:999px;font-size:.93rem;white-space:nowrap}
+.topnav nav a:hover{background:var(--sky)}
+.themebtn{border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:999px;padding:.35rem .7rem;font:inherit;font-size:.85rem;cursor:pointer}
+@media (max-width:640px){.topnav .brand{display:none}}
+
+/* Hero */
+.hero{padding-top:3.5rem;padding-bottom:2.5rem}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;letter-spacing:-.01em;margin-bottom:1rem}
+.hero .who{font-size:.95rem;color:var(--muted);margin-top:1.4rem;border-left:3px solid var(--sun);padding-left:.9rem}
+.rings{width:100%;max-width:400px;justify-self:center}
+.rings text{font-family:"Atkinson Hyperlegible",sans-serif;font-size:13px}
+@media (max-width:820px){.hero .grid{grid-template-columns:1fr}.rings{max-width:320px}}
+
+.parts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.parts a{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:1.1rem 1.2rem}
+.parts a:hover{border-color:var(--sage)}
+.parts strong{font-family:"Literata",Georgia,serif;font-size:1.15rem;display:block}
+.parts span{color:var(--muted);font-size:.95rem}
+@media (max-width:640px){.parts{grid-template-columns:1fr}}
+
+/* Part banners */
+.partband{background:var(--ink);color:var(--paper);padding:2.6rem 0 2.2rem;margin-top:3rem}
+.partband p{color:color-mix(in srgb,var(--paper) 80%,var(--ink));max-width:62ch;margin:.5rem 0 0}
+.partband .kicker{font-size:.95rem;opacity:.85;margin-bottom:.3rem}
+.partband h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+
+section.block{padding:2.6rem 0 .6rem;border-bottom:1px solid var(--rule)}
+section.block:last-of-type{border-bottom:none}
+
+/* Generic components */
+.cols{display:grid;gap:1rem}
+.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:860px){.c3,.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.c2,.c3,.c4{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:1rem 1.1rem}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+.panel.tint{background:var(--sage-soft);border-color:transparent}
+.note{background:var(--sun-soft);border-left:4px solid var(--sun);border-radius:0 10px 10px 0;padding:.85rem 1rem;margin:1.2rem 0}
+.note p:last-child{margin:0}
+
+.spectrum{display:flex;gap:0;margin:1rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--rule)}
+.spectrum div{flex:1;padding:.8rem .9rem;background:var(--surface);font-weight:700;font-size:.95rem;border-right:1px solid var(--rule)}
+.spectrum div:last-child{border-right:none}
+.spectrum div:nth-child(1){background:var(--sage-soft)}
+.spectrum div:nth-child(2){background:color-mix(in srgb,var(--sage-soft) 55%,var(--sun-soft))}
+.spectrum div:nth-child(3){background:var(--sun-soft)}
+.spectrum div:nth-child(4){background:color-mix(in srgb,var(--sun-soft) 50%,var(--red) 18%)}
+@media (max-width:560px){.spectrum{flex-direction:column}.spectrum div{border-right:none;border-bottom:1px solid var(--rule)}}
+
+.stat strong{font-family:"Literata",Georgia,serif;font-size:1.6rem;display:block;line-height:1.15;color:var(--sage)}
+.stat span{font-size:.95rem}
+
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;position:relative}
+.flow .panel h4{color:var(--sage)}
+@media (max-width:760px){.flow{grid-template-columns:1fr}}
+
+.tablewrap{overflow-x:auto;margin:1rem 0;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.96rem}
+th,td{text-align:left;vertical-align:top;padding:.7rem .85rem;border-bottom:1px solid var(--rule)}
+th{font-family:"Literata",Georgia,serif;font-weight:600;background:var(--sky)}
+tr:last-child td{border-bottom:none}
+td:first-child{font-weight:700;white-space:nowrap}
+.wide td:first-child{white-space:normal;min-width:9rem}
+
+details{background:var(--surface);border:1px solid var(--rule);border-radius:12px;margin:.7rem 0}
+summary{cursor:pointer;padding:.85rem 1.1rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:"Literata",serif;font-size:1.3rem;line-height:1;color:var(--sage)}
+details[open] summary::after{content:"–"}
+details .inner{padding:0 1.1rem 1rem}
+
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.6rem 0 1rem;padding:0;list-style:none}
+.chips li{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:.3rem .8rem;font-size:.93rem}
+
+.pap{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;counter-reset:pap}
+.pap .panel{counter-increment:pap}
+.pap h4::before{content:counter(pap) ". ";color:var(--sun)}
+@media (max-width:900px){.pap{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.pap{grid-template-columns:1fr}}
+
+.levels .panel h4{display:flex;align-items:center;gap:.5rem}
+.dot{width:.75rem;height:.75rem;border-radius:50%;display:inline-block;flex:none}
+
+.emo{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+.emo .panel{text-align:left}
+.emo b{display:block;font-family:"Literata",serif;font-size:1.1rem}
+@media (max-width:700px){.emo{grid-template-columns:repeat(2,1fr)}}
+
+.cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+.cycle .panel b{display:block;color:var(--sage)}
+@media (max-width:700px){.cycle{grid-template-columns:repeat(2,1fr)}}
+
+.skills{counter-reset:none}
+
+/* Part 2 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.compare .panel.old{border-style:dashed}
+.compare .panel.old h4{color:var(--muted)}
+.compare .panel.new h4{color:var(--sage)}
+@media (max-width:640px){.compare{grid-template-columns:1fr}}
+
+.vida{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+.vida .panel{border-top:5px solid var(--sun)}
+.vida .letter{font-family:"Literata",serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--sun);display:block;margin-bottom:.3rem}
+@media (max-width:820px){.vida{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.vida{grid-template-columns:1fr}}
+
+.steps{list-style:none;padding:0;margin:1rem 0;counter-reset:st;display:grid;gap:.55rem}
+.steps li{counter-increment:st;display:grid;grid-template-columns:2.6rem 1fr;gap:.8rem;align-items:start;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:.8rem 1rem;margin:0}
+.steps li::before{content:counter(st);font-family:"Literata",serif;font-weight:700;font-size:1.3rem;width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;background:var(--sage-soft);color:var(--sage)}
+.steps li b{display:block}
+.steps.ladder li:nth-child(n){margin-left:calc((var(--i,0)) * 1.1rem)}
+@media (max-width:560px){.steps.ladder li:nth-child(n){margin-left:0}}
+
+.ideation{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:700px){.ideation{grid-template-columns:1fr}}
+.meter{list-style:none;padding:0;margin:0}
+.meter li{display:grid;grid-template-columns:2rem 1fr;gap:.6rem;padding:.55rem 0;border-bottom:1px solid var(--rule)}
+.meter li:last-child{border-bottom:none}
+.meter .n{font-family:"Literata",serif;font-weight:700;width:1.9rem;height:1.9rem;border-radius:6px;display:grid;place-items:center;color:#fff;font-size:.95rem}
+
+.triage{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.triage .panel{border-top:6px solid}
+.triage .g{border-top-color:var(--green)} .triage .y{border-top-color:var(--yellow)} .triage .r{border-top-color:var(--red)}
+.triage .g h4{color:var(--green)} .triage .y h4{color:var(--yellow)} .triage .r h4{color:var(--red)}
+.triage .act{font-weight:700;margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--rule)}
+@media (max-width:760px){.triage{grid-template-columns:1fr}}
+
+.qpr{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.qpr .big{font-family:"Literata",serif;font-weight:700;font-size:2.6rem;line-height:1;color:var(--sage)}
+@media (max-width:760px){.qpr{grid-template-columns:1fr}}
+
+.beams{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;position:relative;padding-top:1.4rem}
+.beams::before{content:"";position:absolute;top:0;left:4%;right:4%;height:.9rem;background:var(--ink);clip-path:polygon(0 100%,50% 0,100% 100%);opacity:.9}
+.beams .panel{border-top:6px solid var(--sage)}
+@media (max-width:760px){.beams{grid-template-columns:1fr}.beams::before{display:none}}
+
+.badge{display:inline-block;font-size:.8rem;font-weight:700;padding:.15rem .6rem;border-radius:999px;background:var(--sun-soft);color:var(--ink);border:1px solid var(--sun);vertical-align:middle;margin-left:.4rem}
+
+.balance{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.balance .risk{border-left:5px solid var(--red)}
+.balance .prot{border-left:5px solid var(--green)}
+@media (max-width:640px){.balance{grid-template-columns:1fr}}
+
+.refs li{margin:.5rem 0;font-size:.95rem}
+
+.help{background:var(--sage);color:#fff;border-radius:16px;padding:1.4rem 1.5rem;margin:2.5rem 0 1rem}
+.help h3{margin:0 0 .4rem;color:#fff}
+.help p{margin:.2rem 0}
+.help a{color:#fff}
+:root[data-theme="dark"] .help, .help{}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .help{background:var(--sage-soft);color:var(--ink)}:root:not([data-theme="light"]) .help h3,:root:not([data-theme="light"]) .help a{color:var(--ink)}}
+:root[data-theme="dark"] .help{background:var(--sage-soft);color:var(--ink)}
+:root[data-theme="dark"] .help h3,:root[data-theme="dark"] .help a{color:var(--ink)}
+
+.triage+p,.cols+p:not(.src),.qpr+h3{margin-top:1rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--rule);margin-top:2rem}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="wrap">
+    <span class="brand">Prevención del suicidio · Resumen</span>
+    <nav aria-label="Secciones">
+      <a href="#parte1">Fundamentos</a>
+      <a href="#parte2">Programas</a>
+      <a href="#matriz">Comparativo</a>
+      <a href="#referencias">Referencias</a>
+    </nav>
+    <button class="themebtn" id="themeBtn" type="button" aria-label="Cambiar tema claro u oscuro">Tema</button>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div class="grid">
+    <div>
+      <h1>Estrategias de intervención en la prevención del suicidio</h1>
+      <p class="lead">Material de consulta para participantes del taller. Reúne los fundamentos conceptuales y los principales programas de intervención revisados, con sus alcances y su nivel de evidencia.</p>
+      <p class="who">César Núñez, PhD · Isabela Cardona Vélez, Mg. · Ana Catalina Muñoz Arbeláez, Mg., PhD (c)<br>APICSA Colombia · Universidad de Medellín</p>
+    </div>
+    <svg class="rings" viewBox="0 0 400 400" role="img" aria-labelledby="ringsT">
+      <title id="ringsT">Niveles del modelo ecológico social: individual, relacional, comunitario y social</title>
+      <circle cx="200" cy="200" r="190" fill="var(--ring4)"/>
+      <circle cx="200" cy="200" r="140" fill="var(--ring3)"/>
+      <circle cx="200" cy="200" r="92" fill="var(--ring2)"/>
+      <circle cx="200" cy="200" r="46" fill="var(--ring1)"/>
+      <text x="200" y="205" text-anchor="middle" fill="var(--paper)" font-weight="700">Individual</text>
+      <text x="200" y="128" text-anchor="middle" fill="#fff" font-weight="700">Relacional</text>
+      <text x="200" y="80" text-anchor="middle" fill="var(--ink)" font-weight="700">Comunitario</text>
+      <text x="200" y="32" text-anchor="middle" fill="var(--ink)" font-weight="700">Social</text>
+      <circle cx="200" cy="200" r="190" fill="none" stroke="var(--sun)" stroke-width="3" stroke-dasharray="6 8"/>
+    </svg>
+  </div>
+  <div class="parts">
+    <a href="#parte1"><strong>Parte 1. Fundamentos</strong><span>Conceptos, modelos explicativos, factores de riesgo, PAP y habilidades para la vida.</span></a>
+    <a href="#parte2"><strong>Parte 2. Programas de intervención</strong><span>LIVE LIFE, C-SSRS, Stanley-Brown, QPR y Las Tres Vigas.</span></a>
+  </div>
+</div>
+
+<!-- ================= PARTE 1 ================= -->
+<div class="partband" id="parte1">
+  <div class="wrap">
+    <p class="kicker">Parte 1</p>
+    <h2>Fundamentos conceptuales</h2>
+    <p>Qué entendemos por conducta suicida, cómo se explica, qué la precipita y qué protege.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section class="block" id="conceptos">
+  <h2>Conceptos clave</h2>
+  <div class="prose">
+    <p>El suicidio es un fenómeno multifacético en el que interactúan factores genéticos y ambientales. Se define como el acto de quitarse la vida deliberadamente: la muerte causada por un comportamiento perjudicial dirigido hacia uno mismo con la intención de morir a causa de dicho comportamiento.</p>
+    <p>La conducta suicida se entiende como un espectro:</p>
+  </div>
+  <div class="spectrum" role="list">
+    <div role="listitem">Pensamientos y conductas autolesivas</div>
+    <div role="listitem">Ideación suicida</div>
+    <div role="listitem">Tentativa suicida</div>
+    <div role="listitem">Suicidio consumado</div>
+  </div>
+
+  <h3>Magnitud del problema</h3>
+  <div class="cols c4">
+    <div class="panel stat"><strong>+700.000</strong><span>personas mueren por suicidio cada año en el mundo.</span></div>
+    <div class="panel stat"><strong>4.ª causa</strong><span>de muerte en personas de 15 a 29 años.</span></div>
+    <div class="panel stat"><strong>3.ª causa</strong><span>de muerte en mujeres de 15 a 19 años.</span></div>
+    <div class="panel stat"><strong>77 %</strong><span>de los suicidios ocurre en países de ingresos bajos y medios.</span></div>
+  </div>
+  <p class="prose" style="margin-top:1rem">Por cada suicidio hay muchas más personas con conductas suicidas. Las mujeres presentan más conductas y actos suicidas no fatales; los hombres, más suicidios consumados.</p>
+  <p class="src">Lengvenyte (2020); Freeman (2017); Instituto Nacional de Salud (2019); WHO (2021, 2023).</p>
+</section>
+
+<section class="block" id="modelo">
+  <h2>Modelo estrés–diátesis</h2>
+  <p class="prose">Integra componentes clínicos y neuropsicológicos a lo largo de la vida. La exposición reiterada a factores de estrés disminuye la resiliencia; la cantidad y la severidad de las experiencias negativas se asocian con conductas e intentos suicidas.</p>
+  <div class="flow">
+    <div class="panel"><h4>Factores distales</h4><ul><li>Adversidades tempranas y enfermedades crónicas</li><li>Exposiciones prenatales</li><li>Factores genéticos y cambios epigenéticos</li><li>Factores dietarios</li></ul></div>
+    <div class="panel"><h4>Factores intermedios</h4><ul><li>Estresores repetitivos</li><li>Desregulación de sistemas biológicos (eje HPA y cortisol, sistema serotoninérgico, estados proinflamatorios)</li><li>Rasgos de personalidad desadaptativos y alteraciones cognitivas</li></ul></div>
+    <div class="panel"><h4>Factores proximales</h4><ul><li>Crisis psicológicas</li><li>Trastornos mentales</li></ul><p>Confluyen con los anteriores en la conducta suicida.</p></div>
+  </div>
+  <p class="src">Lengvenyte (2020).</p>
+
+  <details>
+    <summary>Neurobiología del suicidio</summary>
+    <div class="inner"><ul>
+      <li>Las experiencias adversas tempranas se asocian con desregulación de vías neurofisiológicas (serotonina, oxitocina, respuesta del eje HPA y sistema inmune) y con respuestas desadaptativas.</li>
+      <li>Cambios en la respuesta de áreas fronto-límbicas y temporo-parietales ante estímulos socioafectivos.</li>
+      <li>Mayor activación en la ínsula izquierda y menor en el giro fusiforme bilateral.</li>
+      <li>Alteraciones en receptores de serotonina (5-HT) en la corteza prefrontal, con activación reducida, sobre todo en el hemisferio izquierdo.</li>
+      <li>El estrés aumenta el cortisol y altera las vías de neurotransmisores, con cambios inflamatorios y disfunciones gliales.</li>
+    </ul>
+    <p class="src">Lengvenyte (2020); Chang et al. (2016); Teicher y Samson (2016); Pandey et al. (2018); Underwood et al. (2018); Baumeister et al. (2016).</p></div>
+  </details>
+  <details>
+    <summary>Neuropsicología del suicidio</summary>
+    <div class="inner"><ul class="chips">
+      <li>Bajo control inhibitorio</li><li>Alteración de la fluidez verbal</li><li>Mayor atención a estímulos negativos</li><li>Mayor sensibilidad a la interferencia</li><li>Memoria autobiográfica reducida</li><li>Alteración en la toma de decisiones</li><li>Impulsividad cognitiva (recompensas inmediatas)</li><li>Impulsividad conductual (dificultad para frenar una conducta)</li><li>Inflexibilidad</li><li>Dificultad en el monitoreo y control atencional del pensamiento</li>
+    </ul>
+    <p>En la prueba Stroop, las personas con intentos previos tardan más, lo que evidencia déficits en el procesamiento de la interferencia.</p>
+    <p class="src">Jollant et al. (2011); Richard-Devantoy et al. (2014, 2015); Keilp et al. (2014); Thompson y Ong (2018); Gvion y Levi-Belz (2018).</p></div>
+  </details>
+</section>
+
+<section class="block" id="psicologia">
+  <h2>Psicología del suicidio y factores de riesgo</h2>
+  <div class="cols c2">
+    <div class="panel">
+      <h4>Lo que muestra la evidencia</h4>
+      <ul>
+        <li>Nueve de cada diez personas que mueren por suicidio habían sido diagnosticadas con algún trastorno mental.</li>
+        <li>Se asocia con enfermedades crónicas: cáncer, asma, rinitis alérgica, trauma craneoencefálico, dolor y alteraciones del sueño.</li>
+        <li>Trastornos asociados: del estado de ánimo, estrés postraumático, personalidad límite, esquizofrenia, anorexia nerviosa, abuso y consumo de SPA.</li>
+        <li>Las experiencias psicóticas predicen comportamientos suicidas.</li>
+        <li>Hipersensibilidad al dolor físico en experiencias de exclusión social.</li>
+        <li>Dolor psicológico: sentimientos y pensamientos de culpa, vergüenza, temor, humillación y soledad.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Rasgos psicológicos asociados</h4>
+      <ul class="chips">
+        <li>Reactividad y desregulación emocional</li><li>Rasgos de ansiedad</li><li>Conductas impulsivo-agresivas</li><li>Razonamiento basado en falacias lógicas</li><li>Desorganización semántica</li><li>Rumiación</li><li>Desconexión social y retraimiento</li><li>Desesperanza aprendida</li><li>Anhedonia</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Factores de riesgo</h3>
+  <ul class="chips">
+    <li>Consumo y abuso de SPA</li><li>Problemas en la infancia</li><li>Alteraciones prenatales</li><li>Trauma interpersonal</li><li>Insomnio</li><li>Baja integración social</li><li>Conflictos con el entorno</li><li>Autolesiones e intentos previos</li><li>Baja posición socioeconómica</li><li>Alteraciones de la personalidad</li><li>Reportes sobre suicidio en redes</li><li>Alteraciones funcionales</li>
+  </ul>
+
+  <h3>Señales de alerta en adolescentes</h3>
+  <div class="panel tint prose">
+    <p>Cambios bruscos de humor, irritabilidad, comportamiento desafiante o agresivo, alegría inesperada e inexplicable o calma inusual. También cambios en la alimentación y el sueño, aislamiento social, falta de energía y motivación, descuido de la higiene personal, consumo de sustancias o acumulación de medicamentos.</p>
+    <p class="src">Barjola Cervera (2024).</p>
+  </div>
+  <p class="src">Arsenault-Lapierre et al. (2004); Chesney et al. (2014); Panagioti et al. (2015); Ducasse et al. (2018); Yates et al. (2019); Allen (2019); Núñez, Gómez-Tabares et al. (2024).</p>
+</section>
+
+<section class="block" id="pap">
+  <h2>Primeros auxilios psicológicos (PAP) en crisis</h2>
+  <p class="prose">Apoyo prioritario que busca un equilibrio entre la ventilación y el control emocional, previniendo el desbordamiento.</p>
+  <div class="pap">
+    <div class="panel"><h4>Contener</h4><p>Facilitar la expresión emocional; hay diversas maneras de expresar las emociones.</p></div>
+    <div class="panel"><h4>Calmar</h4><p>Facilitar la relajación y ofrecer espacios de distracción.</p></div>
+    <div class="panel"><h4>Informar</h4><p>Brindar conocimiento sobre los hechos.</p></div>
+    <div class="panel"><h4>Normalizar</h4><p>Comprensión y apoyo frente a las reacciones.</p></div>
+    <div class="panel"><h4>Consolar</h4><p>Buscar actividades de recarga emocional y activar redes de apoyo.</p></div>
+  </div>
+
+  <h3>Niveles de activación y recarga emocional</h3>
+  <div class="cols c3 levels">
+    <div class="panel"><h4><span class="dot" style="background:var(--red)"></span>Activación alta</h4><p>Contagio emocional e histerismo.</p><p><b>Qué hacer:</b> técnicas de relajación y meditación.</p></div>
+    <div class="panel"><h4><span class="dot" style="background:var(--green)"></span>Activación ideal</h4><p>La comunicación es viable.</p><p><b>Recarga alta:</b> se movilizan recursos con facilidad. Pregunta guía: ¿qué puedo hacer para permanecer tranquilo?</p></div>
+    <div class="panel"><h4><span class="dot" style="background:var(--yellow)"></span>Activación baja</h4><p>No hay verbalizaciones; se relaciona con baja recarga.</p><p><b>Qué hacer:</b> activación conductual, rutina, proyecto de vida y metas de corto plazo. Pregunta guía: ¿qué puedo hacer que me haga sentir tranquilo o feliz?</p></div>
+  </div>
+</section>
+
+<section class="block" id="intervencion">
+  <h2>Intervención de la conducta suicida</h2>
+  <h3 style="margin-top:.8rem">Del rasgo del acto suicida a la intervención</h3>
+  <div class="tablewrap"><table class="wide">
+    <thead><tr><th scope="col">Característica del acto suicida</th><th scope="col">Intervención</th></tr></thead>
+    <tbody>
+      <tr><td>Dolor psicológico insoportable</td><td>Disminuir el nivel de sufrimiento psicológico</td></tr>
+      <tr><td>Necesidades psicológicas frustradas</td><td>Encauzar las necesidades frustradas (subsistencia, seguridad, estima, aceptación social, autorrealización)</td></tr>
+      <tr><td>Solución mediante la evitación y la huida</td><td>Entrenamiento en comunicación asertiva</td></tr>
+      <tr><td>Desesperanza aprendida</td><td>Teoría polivagal</td></tr>
+      <tr><td>Constricción psicológica</td><td>Proceso psicoterapéutico</td></tr>
+      <tr><td>Pensamiento dicotómico</td><td>Proceso psicoterapéutico</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="cols c2">
+    <div class="panel">
+      <h4>Evaluación (OMS/OPS)</h4>
+      <ul>
+        <li>Indagar si la persona ha realizado un acto médicamente grave de autolesión.</li>
+        <li>Evaluar si existe riesgo inminente de autolesión o suicidio.</li>
+        <li>Investigar posibles trastornos prioritarios, dolor crónico y gravedad de los síntomas emocionales.</li>
+        <li>Signos a explorar: desesperanza y desesperación extrema; pensamientos, planes o actos de autolesión presentes o pasados; trastorno mental; dolor crónico; alteración emocional grave.</li>
+      </ul>
+      <p>El manejo se ajusta según el escenario: acto médicamente grave, riesgo inminente o riesgo no inminente, siempre con seguimiento.</p>
+    </div>
+    <div class="panel">
+      <h4>Intervenciones con respaldo</h4>
+      <ul>
+        <li>Líneas de atención municipales, departamentales y nacionales.</li>
+        <li>Terapia cognitivo-conductual.</li>
+        <li>Intervención psicosocial.</li>
+        <li>Terapia familiar basada en el apego.</li>
+        <li>Intervenciones digitales indirectas.</li>
+        <li>Contacto de seguimiento (visitas domiciliarias, correo, teléfono) y entrenamiento en afrontamiento, atención plena y regulación emocional.</li>
+        <li>Terapia dialéctico-conductual (DBT): multicomponente, centrada en impulsividad y regulación emocional.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="src">WHO (2021); OPS (2021); Witt et al. (2017); Torok et al. (2019).</p>
+</section>
+
+<section class="block" id="prevencion">
+  <h2>Prevención según el modelo ecológico social</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Nivel</th><th scope="col">Qué revisar para prevenir</th></tr></thead>
+    <tbody>
+      <tr><td>Individual</td><td>Antecedentes de depresión, trastornos mentales, desesperanza, abuso y consumo de SPA, afecciones médicas, intentos previos, antecedentes de víctima o perpetrador de violencia, determinantes genéticos y biológicos.</td></tr>
+      <tr><td>Relacional</td><td>Relaciones altamente conflictivas o violentas, aislamiento y falta de apoyo social, antecedentes de suicidio de un familiar o ser querido, estrés financiero o laboral.</td></tr>
+      <tr><td>Comunitario</td><td>Conexión inadecuada con la comunidad y barreras de acceso a la atención médica y psicológica.</td></tr>
+      <tr><td>Social</td><td>Disponibilidad de medios letales, representaciones mediáticas no seguras, estigma asociado a buscar ayuda y a la enfermedad mental.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="block" id="habilidades">
+  <h2>Habilidades para la vida como factores protectores</h2>
+  <p class="prose">Las habilidades para la vida protegen frente al suicidio. El taller trabajó ocho:</p>
+  <ul class="chips">
+    <li>Afrontamiento positivo al estrés</li><li>Reconocimiento y apropiación de las emociones</li><li>Autorregulación emocional</li><li>Asertividad y escucha activa</li><li>Apoyo social y cooperación</li><li>Conducta alimentaria</li><li>Actividad física</li><li>Higiene del sueño y descanso</li>
+  </ul>
+  <p class="src">Moreno, Londoño, Ortiz, Rozo, Santacolma, Núñez, Alvarán y Albeza (2023).</p>
+
+  <details open>
+    <summary>Afrontamiento al estrés</summary>
+    <div class="inner">
+      <p>Recursos y esfuerzos cognitivos y comportamentales orientados a manejar las demandas externas e internas. Ante un estresor hacemos una <b>valoración primaria</b> (¿qué consecuencias tiene?) y una <b>valoración secundaria</b> (¿con qué capacidades cuento para resolverlo?). Si la adaptación tiene éxito aparecen emociones positivas; si no, negativas. El afrontamiento positivo incrementa la esperanza y el optimismo.</p>
+      <div class="cols c3">
+        <div class="panel"><h4>Enfocadas en el problema</h4><p>Afrontamiento activo, planificación, supresión de otras actividades, postergación del afrontamiento, búsqueda de apoyo social.</p><p><b>Se asocian con un funcionamiento más eficaz.</b></p></div>
+        <div class="panel"><h4>Enfocadas en la emoción</h4><p>Búsqueda de apoyo emocional, reinterpretación positiva, aceptación, acompañamiento espiritual, análisis de las emociones.</p><p><b>Se asocian con más problemas emocionales y comportamentales.</b></p></div>
+        <div class="panel"><h4>Orientadas a la evitación</h4><p>Negación, conductas inadecuadas, distracción, hiperactividad, irritabilidad y respuestas agresivas.</p><p><b>Se asocian con ideación suicida, planificación y mayor desesperanza.</b></p></div>
+      </div>
+      <h4 style="margin-top:1.2rem">Pasos para resolver problemas</h4>
+      <ol class="steps">
+        <li><span><b>Cuidar los hábitos de vida</b>alimentación, sueño y actividad física.</span></li>
+        <li><span><b>¿Cuál es el problema?</b>Escribirlo.</span></li>
+        <li><span><b>¿De quién es el problema?</b></span></li>
+        <li><span><b>Ubicarlo en el tiempo</b>¿Es algo del yo del presente o del yo del futuro?</span></li>
+        <li><span><b>Fijar metas de corto plazo</b>y ubicarlas temporalmente.</span></li>
+      </ol>
+      <p>Ursul y Herrera Guerra (2023) encontraron asociación entre el riesgo suicida y estrategias como la evitación emocional, la reacción agresiva y la dificultad para expresar; recomiendan intervenciones que promuevan el afrontamiento positivo en el entorno escolar, dentro de un enfoque multisectorial de salud pública.</p>
+      <p class="src">Lazarus y Folkman (1986); Kerr et al. (2012); Kim et al. (2012); Moore et al. (2014); Ursul y Herrera (2022).</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Reconocimiento y apropiación de las emociones</summary>
+    <div class="inner">
+      <p>Las emociones movilizan y nos ayudan a valorar las experiencias. La pregunta clave es: <b>¿qué me dice esta emoción?</b></p>
+      <div class="emo">
+        <div class="panel"><b>Miedo</b>alerta, peligro</div>
+        <div class="panel"><b>Tristeza</b>buscar redes de apoyo</div>
+        <div class="panel"><b>Ira</b>límites, problemas</div>
+        <div class="panel"><b>Desagrado</b>tomar distancia</div>
+      </div>
+      <h4 style="margin-top:1.2rem">Situación, emoción, pensamiento y conducta</h4>
+      <div class="cycle">
+        <div class="panel"><b>Situación</b>¿Qué sucedió?</div>
+        <div class="panel"><b>Emoción</b>¿Cómo me sentí?</div>
+        <div class="panel"><b>Pensamientos</b>¿Qué significó para mí?</div>
+        <div class="panel"><b>Conducta</b>¿Cómo reaccioné?</div>
+      </div>
+      <p style="margin-top:1rem">Sentirse bien es un factor protector contra el suicidio: ¿cómo decido sentirme?</p>
+      <p class="src">Urrego (2021); Extremera et al. (2023); Hermosillo et al. (2021); Gómez-Tabares, Mogollón, Clavijo y Núñez (2023).</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Autorregulación emocional</summary>
+    <div class="inner">
+      <p>Implica monitorear, evaluar y modificar las reacciones emocionales. Frente a una emoción, la primera pregunta es <b>¿cuál es mi objetivo?</b> La reestructuración cognitiva es una vía más adaptativa que la supresión de la expresión emocional.</p>
+      <div class="cols c3">
+        <div class="panel"><h4>Para el cuerpo</h4><p>Técnicas de respiración, atención plena y centrarse en el presente.</p></div>
+        <div class="panel"><h4>Para avanzar</h4><p>¿Cuál es mi objetivo? ¿Qué necesito para lograrlo? ¿Qué de eso me hace falta? Metas de corto plazo.</p></div>
+        <div class="panel"><h4>Para los límites</h4><p>¿Qué me incomodó? ¿Es algo que puedo controlar o es del otro? ¿Cómo comunico asertivamente mis límites?</p></div>
+      </div>
+      <p style="margin-top:1rem">Puigardeu et al. (2021) señalan la autorregulación emocional como factor protector, junto con las habilidades sociales, una autoestima adecuada y tener un proyecto de vida.</p>
+      <p class="src">Thompson (1994); Gross y Thompson (2007); Andrés et al. (2016); Londoño-Pérez et al. (2022).</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Asertividad y escucha activa</summary>
+    <div class="inner">
+      <p>La escucha activa es fundamental para construir vínculos sociales y sensibiliza hacia comportamientos solidarios y de cuidado (Herrera Morales et al., 2024).</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th scope="col">Dimensión</th><th scope="col">Qué implica</th></tr></thead>
+        <tbody>
+          <tr><td>Perceptiva</td><td>Observar</td></tr>
+          <tr><td>Cognitiva</td><td>Pensar</td></tr>
+          <tr><td>Emocional</td><td>Empatía</td></tr>
+          <tr><td>Ejecutiva</td><td>Afirmar, aclarar</td></tr>
+          <tr><td>Biológica</td><td>Sentidos y postura corporal</td></tr>
+        </tbody>
+      </table></div>
+      <div class="cols c3">
+        <div class="panel"><h4>Estilo pasivo</h4><p>Inhibición y complacencia.</p></div>
+        <div class="panel"><h4>Estilo agresivo</h4><p>Demanda y autoridad.</p></div>
+        <div class="panel tint"><h4>Estilo asertivo</h4><p>Validación del otro y límites claros.</p></div>
+      </div>
+      <h4 style="margin-top:1.2rem">Tres pasos para responder con asertividad</h4>
+      <ol class="steps">
+        <li><span><b>Reconocer y validar</b>las emociones, intenciones o ideas del otro.</span></li>
+        <li><span><b>Expresar</b>lo que pienso o siento y poner límites.</span></li>
+        <li><span><b>Proponer</b>una solución o cambiar de tema.</span></li>
+      </ol>
+      <p>Mejorar la asertividad es un factor protector frente al riesgo suicida (Villamil Ramírez et al., 2024). En una intervención educativa centrada en autoestima, asertividad, habilidades sociales y comunicación, Cañón et al. (2018) reportaron una reducción del riesgo suicida del 42,7 % al 6,8 % entre el pre y el postest.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Apoyo social y cooperación</summary>
+    <div class="inner"><p>La interacción social favorece la liberación de oxitocina y fortalece la red de apoyo, uno de los principales anclajes protectores.</p></div>
+  </details>
+
+  <details>
+    <summary>Conducta alimentaria, actividad física, sueño y ocio</summary>
+    <div class="inner">
+      <div class="cols c2">
+        <div class="panel"><h4>Alimentación</h4><p>Se ha encontrado relación entre alimentación, higiene del sueño y trastornos digestivos. Tienen efecto positivo la rutina (desayuno, almuerzo y cena) y la cantidad ajustada a la edad y al gasto energético; el tipo de alimentos importa (proteínas, frutas, vegetales, carbohidratos complejos y fibra; limitar el azúcar).</p><p>Benites Castillo y Reyes Méndez (2024), en 600 estudiantes, hallaron que a mayor riesgo en las conductas alimentarias, más ideación suicida en adolescentes.</p></div>
+        <div class="panel"><h4>Actividad física</h4><p>La actividad de intensidad moderada a baja y regular mejora la calidad del sueño, la regulación del sistema nervioso parasimpático y el estado de ánimo (noradrenalina, endorfinas y dopamina).</p><ul><li>Identificar la actividad que me recarga emocionalmente.</li><li>Realizar 15 minutos de actividad física diaria.</li><li>Hacer pausas activas de unos 5 minutos, 3 o 4 veces al día.</li></ul></div>
+      </div>
+      <p style="margin-top:1rem">Los hábitos saludables (higiene del sueño, deporte y alimentación sana) figuran entre los factores protectores (Barjola Cervera, 2024). Los programas de ocio y tiempo libre, con actividades artísticas y de ejercicio, tienen una orientación preventiva favorable (Cuesta, 2024), aunque todavía no hay evaluaciones que midan su eficacia.</p>
+      <p class="src">Duran (2024); Moreno et al. (2023).</p>
+    </div>
+  </details>
+</section>
+
+</div>
+
+<!-- ================= PARTE 2 ================= -->
+<div class="partband" id="parte2">
+  <div class="wrap">
+    <p class="kicker">Parte 2</p>
+    <h2>Principales programas de intervención</h2>
+    <p>Análisis de evidencia y alcances de cinco protocolos: LIVE LIFE (OMS), escala C-SSRS, plan de seguridad Stanley-Brown, entrenamiento QPR y Las Tres Vigas.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section class="block" id="acuerdos">
+  <h2>Acuerdos éticos y límites</h2>
+  <div class="cols c4">
+    <div class="panel"><h4>Lenguaje no estigmatizante</h4><p>Términos clínicos precisos, sin expresiones condenatorias ni sensacionalistas.</p></div>
+    <div class="panel"><h4>Omisión de métodos</h4><p>No se detallan mecanismos lesivos, para prevenir el contagio.</p></div>
+    <div class="panel"><h4>Autocuidado activo</h4><p>Derecho a pausar o retirarse ante una reactivación emocional.</p></div>
+    <div class="panel"><h4>Confidencialidad</h4><p>Protección de las reflexiones personales compartidas.</p></div>
+  </div>
+  <div class="note"><p><b>Límite de competencia:</b> este espacio no sustituye certificaciones clínicas especializadas ni autoriza intervenciones sin supervisión.</p></div>
+
+  <h3>Del modelo reactivo al proactivo</h3>
+  <div class="compare">
+    <div class="panel old"><h4>Enfoque tradicional</h4><ul><li>Contratos de no suicidio, sin respaldo empírico protector.</li><li>Intervención tardía, solo ante crisis inminente.</li><li>Respuestas clínicas fragmentadas y aisladas.</li></ul></div>
+    <div class="panel new"><h4>Modelo actual</h4><ul><li>Planes de seguridad escritos y activos.</li><li>Triage sistemático y detección temprana en el primer nivel.</li><li>Redes comunitarias intersectoriales entrenadas (guardianes).</li></ul></div>
+  </div>
+  <p class="src">OPS/OMS (2021).</p>
+</section>
+
+<section class="block" id="livelife">
+  <h2>LIVE LIFE (OMS)</h2>
+  <p class="prose lead">No es una psicoterapia individual: es un marco de gobernanza multisectorial para países y territorios.</p>
+  <div class="cols c4">
+    <div class="panel"><h4>Origen</h4><p>Lanzada en 2021 por la Organización Mundial de la Salud.</p></div>
+    <div class="panel"><h4>Problema</h4><p>Políticas fragmentadas, poca restricción de medios letales, estigma mediático y déficit de detección en atención primaria.</p></div>
+    <div class="panel"><h4>Población</h4><p>Población general, jóvenes, comunidades rurales y grupos vulnerables.</p></div>
+    <div class="panel"><h4>Meta</h4><p>Reducir en un tercio la mortalidad por suicidio para 2030 (ODS 3.4).</p></div>
+  </div>
+
+  <h3>Las cuatro intervenciones clave: VIDA</h3>
+  <div class="vida">
+    <div class="panel"><span class="letter">V</span><h4>Limitar el acceso a los medios</h4><p>Restricción de plaguicidas de alta toxicidad, armas de fuego y barreras físicas en lugares de riesgo.</p></div>
+    <div class="panel"><span class="letter">I</span><h4>Interactuar con los medios de comunicación</h4><p>Información responsable para evitar el efecto Werther (imitación) y favorecer el efecto Papageno (relatos de personas que superaron una crisis).</p></div>
+    <div class="panel"><span class="letter">D</span><h4>Desarrollar aptitudes en los jóvenes</h4><p>Programas escolares de regulación socioemocional y resolución pacífica de problemas.</p></div>
+    <div class="panel"><span class="letter">A</span><h4>Detectar a tiempo a las personas afectadas</h4><p>Detección temprana y seguimiento continuo en la red de atención primaria.</p></div>
+  </div>
+  <p style="margin-top:1rem"><b>Fundamentos transversales:</b> análisis de la situación, colaboración multisectorial, sensibilización y promoción, desarrollo de capacidades, financiamiento, y vigilancia, monitoreo y evaluación.</p>
+
+  <h3>Solidez empírica</h3>
+  <div class="cols c3">
+    <div class="panel"><h4>Restricción de plaguicidas · sólida</h4><p>Reducciones del 50 % al 70 % en muertes en Sri Lanka, Corea del Sur y Bangladesh tras la prohibición legal, sin un efecto de sustitución equivalente.</p></div>
+    <div class="panel"><h4>Regulación de medios · consistente</h4><p>Las guías de reporte periodístico disminuyen los picos por imitación tras muertes públicas de alta visibilidad.</p></div>
+    <div class="panel"><h4>Programas escolares · moderada</h4><p>Mejoran el clima escolar y la búsqueda de ayuda; el impacto a largo plazo en las tasas es variable.</p></div>
+  </div>
+  <p>La combinación de los cuatro componentes supera el impacto de cualquier medida aislada.</p>
+
+  <h3>Fases de implementación multisectorial</h3>
+  <ol class="steps">
+    <li><span><b>Diagnóstico situacional</b>Epidemiología local, medios letales predominantes y recursos disponibles.</span></li>
+    <li><span><b>Mesa multisectorial</b>Articulación con agricultura, transporte, educación y medios.</span></li>
+    <li><span><b>Adaptación local</b>Ajuste normativo y protocolos para el personal de salud.</span></li>
+    <li><span><b>Despliegue y capacitación</b>Entrenamiento a docentes, médicos generales y periodistas.</span></li>
+    <li><span><b>Evaluación y ajuste</b>Monitoreo de tasas y de adherencia a los protocolos.</span></li>
+  </ol>
+  <p class="src">Más información: <a href="https://www.who.int/initiatives/live-life-initiative-for-suicide-prevention">iniciativa LIVE LIFE de la OMS</a>.</p>
+</section>
+
+<section class="block" id="cssrs">
+  <h2>Escala Columbia (C-SSRS)</h2>
+  <p class="prose lead">Estándar para evaluar de forma estandarizada la severidad de la ideación y la conducta suicida.</p>
+  <div class="cols c4">
+    <div class="panel"><h4>Autoría</h4><p>Kelly Posner y colaboradores, Universidad de Columbia / NIMH (2007).</p></div>
+    <div class="panel"><h4>Qué resuelve</h4><p>Elimina la ambigüedad del rótulo “gesto suicida”, que mezclaba pensamientos pasivos, conductas no lesivas y actos de alta letalidad.</p></div>
+    <div class="panel"><h4>Acceso</h4><p>Dominio público, disponible en más de 100 idiomas sin costo de licencia.</p></div>
+    <div class="panel"><h4>Versiones</h4><p>Completa (clínica e investigación) y tamizaje breve (urgencias, atención primaria y escuelas).</p></div>
+  </div>
+
+  <h3>Estructura jerárquica</h3>
+  <div class="ideation">
+    <div class="panel">
+      <h4>Cinco niveles de ideación</h4>
+      <ul class="meter">
+        <li><span class="n" style="background:var(--green)">1</span><span><b>Deseo de estar muerto.</b> Pensamiento pasivo.</span></li>
+        <li><span class="n" style="background:var(--green)">2</span><span><b>Pensamientos activos inespecíficos.</b></span></li>
+        <li><span class="n" style="background:var(--yellow)">3</span><span><b>Ideación activa con método,</b> sin plan ni intención.</span></li>
+        <li><span class="n" style="background:var(--red)">4</span><span><b>Ideación con cierta intención</b> de actuar.</span></li>
+        <li><span class="n" style="background:var(--red)">5</span><span><b>Ideación con plan e intención.</b></span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>Cuatro tipos de conducta</h4>
+      <ul>
+        <li><b>Intento real:</b> conducta potencialmente lesiva con alguna intención de morir.</li>
+        <li><b>Intento interrumpido:</b> detenido por un factor externo.</li>
+        <li><b>Intento abortado:</b> detenido por la propia persona antes de actuar.</li>
+        <li><b>Actos preparatorios:</b> por ejemplo, despedidas o cartas.</li>
+      </ul>
+      <p>No genera un puntaje de suma: la clasificación se rige por el nivel más severo detectado.</p>
+    </div>
+  </div>
+
+  <h3>Triage clínico por semáforo</h3>
+  <div class="triage">
+    <div class="panel g"><h4>Riesgo bajo</h4><p><b>Nivel 1 o 2.</b> Pensamientos pasivos de muerte, sin intención ni conducta previa.</p><p class="act">Consulta ambulatoria programada y seguimiento telefónico preventivo.</p></div>
+    <div class="panel y"><h4>Riesgo medio</h4><p><b>Nivel 3 o intentos remotos.</b> Ideación activa con método pero sin intención declarada, o antecedentes de más de 3 meses.</p><p class="act">Co-diseño del plan de seguridad (SPI) y derivación prioritaria a salud mental.</p></div>
+    <div class="panel r"><h4>Riesgo alto</h4><p><b>Nivel 4, 5 o conducta reciente.</b> Intención firme, plan activo o intento o acto preparatorio en los últimos 90 días.</p><p class="act">No dejar sola a la persona. Traslado inmediato a urgencias.</p></div>
+  </div>
+  <p>El semáforo vincula la respuesta con el hallazgo específico y evita tanto el sobreingreso como la omisión. La pregunta sobre la <b>intención</b> marca la diferencia entre el nivel 3 y el 4.</p>
+
+  <div class="cols c3">
+    <div class="panel"><h4>Valor predictivo</h4><p>Identificar los niveles 4 o 5 multiplica significativamente el riesgo de un intento posterior (Posner et al., 2011).</p></div>
+    <div class="panel"><h4>Confiabilidad</h4><p>Alto acuerdo entre profesionales de medicina, enfermería y psicología; estandariza la comunicación clínica.</p></div>
+    <div class="panel"><h4>Limitaciones</h4><p>Depende del autorreporte veraz y debe formar parte de una evaluación clínica integral, nunca usarse como prueba única.</p></div>
+  </div>
+  <p class="src">Más información: <a href="https://www.imhay.org/escala-de-columbia/">Escala de Columbia en español</a>.</p>
+</section>
+
+<section class="block" id="spi">
+  <h2>Plan de seguridad Stanley-Brown (SPI)</h2>
+  <p class="prose lead">Intervención breve y colaborativa para gestionar una crisis suicida. Su eficacia está en la conversación clínica, no en el formulario.</p>
+  <div class="cols c3">
+    <div class="panel"><h4>Origen</h4><p>Barbara Stanley y Gregory Brown (Universidad de Columbia y Universidad de Pensilvania), 2008.</p></div>
+    <div class="panel"><h4>Formato</h4><p>Documento escrito de una página, co-diseñado en una sesión de 20 a 45 minutos.</p></div>
+    <div class="panel"><h4>Población</h4><p>Personas en atención ambulatoria con ideación suicida y personas que egresan de urgencias.</p></div>
+  </div>
+  <div class="note"><p><b>No es un contrato de no suicidio.</b> El contrato tradicional era punitivo, ineficaz y transfería la responsabilidad a la persona. El plan de seguridad le indica qué hacer, paso a paso, cuando aparecen las ideas.</p></div>
+
+  <h3>Los seis pasos</h3>
+  <p class="prose">La persona recorre los pasos en orden. Si un nivel no calma la crisis, pasa al siguiente.</p>
+  <ol class="steps ladder">
+    <li style="--i:0"><span><b>Señales de alerta</b>Pensamientos, emociones o conductas que avisan el inicio de la crisis.</span></li>
+    <li style="--i:1"><span><b>Estrategias internas de afrontamiento</b>Acciones individuales sin contactar a otros: música, caminar, respirar.</span></li>
+    <li style="--i:2"><span><b>Personas y lugares que distraen</b>Contacto social que ayuda a desviar la atención sin hablar de la crisis.</span></li>
+    <li style="--i:3"><span><b>Personas a quienes pedir ayuda</b>Familiares o amigos con quienes se puede hablar abiertamente de la situación.</span></li>
+    <li style="--i:4"><span><b>Profesionales y servicios</b>Terapeutas, líneas de crisis 24/7 y servicios de urgencias.</span></li>
+    <li style="--i:5"><span><b>Hacer seguro el entorno</b>Reducir el acceso a medios letales con apoyo de terceros.</span></li>
+  </ol>
+
+  <h3>Evidencia</h3>
+  <div class="cols c3">
+    <div class="panel stat"><strong>−45 %</strong><span>de conductas suicidas en los 6 meses siguientes, frente a la atención habitual, en servicios de urgencias (Stanley et al., 2018).</span></div>
+    <div class="panel stat"><strong>≈2 veces</strong><span>más probabilidad de asistir a la primera cita ambulatoria después del alta.</span></div>
+    <div class="panel stat"><strong>+ seguimiento</strong><span>El mayor efecto se logra combinando el plan con al menos una llamada estructurada de seguimiento.</span></div>
+  </div>
+  <p>Recomendación práctica: que la persona lleve una copia física y una foto legible del plan en su teléfono.</p>
+  <p class="src">Más información: <a href="https://suicidesafetyplan.com/">suicidesafetyplan.com</a>.</p>
+</section>
+
+<section class="block" id="qpr">
+  <h2>Entrenamiento de guardianes QPR</h2>
+  <p class="prose lead">Primeros auxilios psicológicos para personal no clínico (<i>gatekeeper training</i>). Capacita para hacer contacto, contener y derivar; no para hacer terapia.</p>
+  <div class="cols c2">
+    <div class="panel"><h4>Premisa</h4><p>Las personas en riesgo rara vez acuden por su cuenta a un servicio de salud mental; emiten señales a quienes las rodean. Un guardián reconoce esas señales y tiende el puente hacia la atención. Fue creado por Paul Quinnett (1995) a semejanza de la reanimación cardiopulmonar.</p></div>
+    <div class="panel tint"><h4>Mito que derriba</h4><p>Preguntar directamente por el suicidio <b>no</b> implanta la idea ni aumenta el riesgo. Al contrario, la persona suele sentir alivio al ser escuchada.</p><p><b>Guardianes posibles:</b> docentes, líderes comunitarios, consejeros estudiantiles, personal de seguridad, policía y familias.</p></div>
+  </div>
+
+  <h3>La cadena de supervivencia</h3>
+  <div class="qpr">
+    <div class="panel"><span class="big">Q</span><h4>Preguntar</h4><p>De forma directa y sin eufemismos: “¿Estás pensando en suicidarte?”. Evitar fórmulas invalidantes como “¿no estarás pensando una locura, verdad?”.</p></div>
+    <div class="panel"><span class="big">P</span><h4>Persuadir</h4><p>Escuchar el dolor sin juzgar ni discutir, validar el sufrimiento y animar a recibir apoyo: “Quiero que vivas y te voy a acompañar a buscar ayuda”.</p></div>
+    <div class="panel"><span class="big">R</span><h4>Referir</h4><p>Hacer un puente cálido hacia los servicios especializados, con acompañamiento presencial o entrega directa. No dejar sola a la persona.</p></div>
+  </div>
+
+  <h3>Evidencia</h3>
+  <div class="cols c3">
+    <div class="panel"><h4>Muy sólida</h4><p>Aumentan el conocimiento y la disposición para preguntar abiertamente.</p></div>
+    <div class="panel"><h4>Consistente</h4><p>Aumentan las remisiones efectivas a los servicios de salud.</p></div>
+    <div class="panel"><h4>Limitación</h4><p>Las destrezas decaen entre los 6 y 12 meses si no hay refuerzos periódicos.</p></div>
+  </div>
+  <p class="src">Mitchell et al. (2013). Más información: <a href="https://qprinstitute.com/">QPR Institute</a>.</p>
+</section>
+
+<section class="block" id="vigas">
+  <h2>Modelo de contención Las Tres Vigas <span class="badge">Propuesta no validada</span></h2>
+  <p class="prose lead">Propuesta pragmática en suicidología clínica de César Núñez e Isabela Cardona (Universidad de Medellín), en proceso de consolidación.</p>
+  <div class="cols c2">
+    <div class="panel"><h4>Metáfora</h4><p>La vida se sostiene como un techo sobre tres vigas maestras. Si una se fractura, la estructura cruje; si dos caen, sobreviene el colapso. Antes de reparar la decoración de la casa hay que apuntalar los pilares de carga.</p></div>
+    <div class="panel"><h4>Problema que aborda</h4><p>Evita iniciar terapias de <i>insight</i> o reestructuración profunda cuando la persona está física o relacionalmente descompensada. Ofrece un mapa visual sencillo en momentos de confusión aguda.</p></div>
+  </div>
+
+  <h3>Las tres vigas</h3>
+  <div class="beams">
+    <div class="panel"><h4>Ocupacional</h4><p>Trabajo, estudio o rol productivo cotidiano. Aporta ritmo, anclaje al día a día y sensación de utilidad social.</p></div>
+    <div class="panel"><h4>Biológica</h4><p>Sueño, nutrición y dolor. El insomnio severo y el dolor descompensado anulan la capacidad de freno cognitivo.</p></div>
+    <div class="panel"><h4>Relacional</h4><p>Pertenencia y vínculo. No importa la cantidad de contactos, sino al menos un vínculo donde la persona sienta que su existencia importa.</p></div>
+  </div>
+  <p style="margin-top:1rem">Si dos vigas están completamente rotas, el riesgo es crítico.</p>
+
+  <h3>Protocolo de estabilización en tres sesiones</h3>
+  <p class="prose">Sesiones con intervalos cortos, de máximo 48 a 72 horas entre sí.</p>
+  <ol class="steps">
+    <li><span><b>Diagnóstico y viga biológica</b>Identificar el estado de las vigas, restablecer sueño y nutrición (con apoyo de psiquiatría) e instaurar microrrutinas diarias de 30 minutos.</span></li>
+    <li><span><b>Apuntalamiento vincular</b>Convocar a un aliado significativo, romper el aislamiento, acordar un código de comunicación de emergencia y hacer seguro el domicilio con la familia.</span></li>
+    <li><span><b>Reanclaje ocupacional y plan</b>Reincorporación gradual a actividades mínimas, formalización del plan de contingencia y valoración del paso a psicoterapia continuada.</span></li>
+  </ol>
+</section>
+
+<section class="block" id="matriz">
+  <h2>Matriz comparativa</h2>
+  <p class="prose">Cada herramienta responde a un nivel ecológico diferente, desde la legislación nacional hasta la consulta individual.</p>
+  <div class="tablewrap"><table class="wide">
+    <thead><tr><th scope="col">Programa</th><th scope="col">Población</th><th scope="col">Contexto de uso</th><th scope="col">Componente clave</th><th scope="col">Evidencia</th><th scope="col">Principal limitación</th></tr></thead>
+    <tbody>
+      <tr><td>LIVE LIFE</td><td>Población general y grupos de riesgo</td><td>Política pública y salud territorial</td><td>Restricción de medios y regulación mediática</td><td>Sólida en plaguicidas</td><td>Requiere voluntad política y articulación intersectorial</td></tr>
+      <tr><td>C-SSRS</td><td>Clínica e institucional amplia</td><td>Urgencias, triage y consulta externa</td><td>Gradación jerárquica en 5 niveles</td><td>Muy sólida</td><td>Depende del autorreporte; no es prueba única</td></tr>
+      <tr><td>Stanley-Brown</td><td>Personas con ideación en atención ambulatoria</td><td>Urgencias y psicoterapia</td><td>Plan escrito de 6 pasos</td><td>Consistente</td><td>Requiere alianza colaborativa sin coerción</td></tr>
+      <tr><td>QPR</td><td>Pares, docentes, líderes, policía</td><td>Comunidad, escuela, trabajo</td><td>Preguntar, persuadir, referir</td><td>Sólida en conocimiento y derivación</td><td>Decaimiento de habilidades a los 6 meses</td></tr>
+      <tr><td>Las Tres Vigas</td><td>Psicólogos y médicos en salud mental</td><td>Consulta clínica de 3 sesiones con red médica</td><td>Estabilizar soportes vitales antes del <i>insight</i></td><td>En consolidación</td><td>Modelo clínico cualitativo no validado</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>¿Qué herramienta usar y cuándo?</h3>
+  <div class="cols c4">
+    <div class="panel"><h4>Nivel comunitario · QPR</h4><p>Docentes, porteros y familias. Romper el silencio y hacer un puente seguro.</p></div>
+    <div class="panel"><h4>Triage · C-SSRS breve</h4><p>Urgencias y enfermería. Clasificar el riesgo en verde, amarillo o rojo.</p></div>
+    <div class="panel"><h4>Ambulatorio · SPI</h4><p>Crisis moderada. Dotar a la persona de un mapa de afrontamiento autónomo.</p></div>
+    <div class="panel"><h4>Descompensación · Tres Vigas</h4><p>Casos complejos. Estabilizar soportes vitales antes del <i>insight</i>.</p></div>
+  </div>
+  <p style="margin-top:1rem">Las herramientas pueden encadenarse en una misma ruta asistencial: ningún programa actúa de forma aislada.</p>
+
+  <h3>Balanza de vulnerabilidad</h3>
+  <div class="balance">
+    <div class="panel risk"><h4>Factores que precipitan el riesgo</h4><ul><li>Pérdida laboral o académica reciente de alto impacto.</li><li>Acceso no restringido a medios letales.</li><li>Intoxicación aguda por alcohol u otras sustancias.</li><li>Sensación agobiante de ser una carga para los demás.</li></ul></div>
+    <div class="panel prot"><h4>Anclajes protectores</h4><ul><li>Al menos un vínculo de apego seguro.</li><li>Responsabilidad afectiva hacia hijos, familiares o mascotas.</li><li>Creencias personales o espirituales de preservación de la vida.</li><li>Contacto regular y cálido con la red de salud.</li></ul></div>
+  </div>
+  <p style="margin-top:1rem">La intervención en crisis busca disminuir el peso de los estresores y potenciar los anclajes protectores.</p>
+
+  <h3>Límites de aplicabilidad</h3>
+  <div class="cols c3">
+    <div class="panel"><h4>Formación</h4><p>Aplicar C-SSRS o Stanley-Brown exige estudiar sus manuales oficiales y practicar con supervisión.</p></div>
+    <div class="panel"><h4>Registro</h4><p>Toda evaluación de riesgo y plan de seguridad se consigna en la historia clínica con fecha, hora y nivel asignado.</p></div>
+    <div class="panel"><h4>Red institucional</h4><p>Ningún profesional debe sostener solo un caso de riesgo alto sin conexión con psiquiatría de guardia.</p></div>
+  </div>
+  <div class="note"><p>La omisión deliberada de derivación ante riesgo inminente constituye negligencia profesional.</p></div>
+</section>
+
+<section class="block" id="sintesis">
+  <h2>Síntesis del taller</h2>
+  <div class="cols c4">
+    <div class="panel tint"><h4>Evidencia antes que intención</h4><p>La buena voluntad no basta: se requieren protocolos validados y mediciones estandarizadas.</p></div>
+    <div class="panel tint"><h4>Pregunta directa</h4><p>Indagar abiertamente por las ideas suicidas salva vidas y no aumenta el riesgo.</p></div>
+    <div class="panel tint"><h4>Plan colaborativo</h4><p>Reemplazar los contratos de no suicidio por planes de seguridad activos y personalizados.</p></div>
+    <div class="panel tint"><h4>Trabajo en red</h4><p>La prevención eficaz une comunidad, escuela, hospital y política pública.</p></div>
+  </div>
+  <p class="lead" style="margin-top:1.4rem;font-family:'Literata',Georgia,serif">El suicidio es prevenible cuando hay capacitación técnica, empatía activa y respuesta oportuna.</p>
+</section>
+
+<section class="block" id="referencias">
+  <h2>Referencias principales</h2>
+  <ul class="refs">
+    <li>Organización Mundial de la Salud. (2021). <i>LIVE LIFE: An implementation guide for suicide prevention in countries</i>. <a href="https://www.who.int/publications/i/item/9789240026629">who.int</a></li>
+    <li>Organización Panamericana de la Salud. (2021). <i>Prevención de la conducta suicida en las Américas</i>. <a href="https://doi.org/10.37774/9789275324240">doi.org/10.37774/9789275324240</a></li>
+    <li>Posner, K., Brown, G. K., Stanley, B., Brent, D. A., Yershova, K. V., Oquendo, M. A., … Mann, J. J. (2011). The Columbia-Suicide Severity Rating Scale. <i>American Journal of Psychiatry, 168</i>(12), 1266–1277. <a href="https://doi.org/10.1176/appi.ajp.2011.10111704">doi</a></li>
+    <li>Stanley, B., Brown, G. K., Brenner, L. A., Galfalvy, H. C., Currier, G. W., Knox, K. L., … Green, K. L. (2018). Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department. <i>JAMA Psychiatry, 75</i>(9), 894–900. <a href="https://doi.org/10.1001/jamapsychiatry.2018.1776">doi</a></li>
+    <li>Quinnett, P. (2012). <i>QPR: Ask a question, save a life</i>. The QPR Institute.</li>
+    <li>Mitchell, S. L., et al. (2013). A randomized controlled trial of gatekeeper training. <i>Suicide and Life-Threatening Behavior</i>.</li>
+    <li>Lengvenyte, A. (2020). Modelo estrés–diátesis y neurobiología de la conducta suicida.</li>
+    <li>Moreno, Londoño, Ortiz, Rozo, Santacolma, Núñez, Alvarán y Albeza (2023). Habilidades para la vida como factores protectores.</li>
+    <li>Núñez, Gómez Tabares, Moreno Méndez, Muñoz Arbeláez, Cardona Vélez y Caballo (2024).</li>
+  </ul>
+</section>
+
+<aside class="help" aria-labelledby="helpT">
+  <h3 id="helpT">Si tú o alguien cercano necesita apoyo</h3>
+  <p>En Colombia puedes comunicarte con la línea nacional de salud mental 192, opción 4, o con la línea de emergencias 123. Ante riesgo inminente, acude al servicio de urgencias más cercano y no dejes sola a la persona.</p>
+</aside>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Taller “Estrategias de intervención en la prevención del suicidio” · César Núñez, PhD; Isabela Cardona Vélez, Mg.; Ana Catalina Muñoz Arbeláez, Mg., PhD (c) · APICSA Colombia y Universidad de Medellín. Material de apoyo para participantes; no sustituye formación clínica especializada ni supervisión.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('tema');if(s)root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('tema',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
